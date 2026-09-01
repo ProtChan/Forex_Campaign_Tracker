@@ -7,6 +7,7 @@
   <meta name="description" content="FX・CFDキャンペーンの参加状況、コスト、当選額、ネット損益をブラウザ内に記録するトラッカー。">
   <title>Forex Campaign Tracker</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="overrides.css?v=2">
 </head>
 <body>
   <header class="topbar">
@@ -37,10 +38,10 @@
     </section>
 
     <section class="kpi-grid" aria-label="集計">
-      <article class="kpi-card"><span>総コスト</span><strong id="totalCost">¥0</strong><small>入力済み実コスト</small></article>
+      <article class="kpi-card"><span>総コスト</span><strong id="totalCost">¥0</strong><small>負数は取引利益として入力可</small></article>
       <article class="kpi-card"><span>現金還元</span><strong id="totalCashReward">¥0</strong><small>当選・キャッシュバック</small></article>
-      <article class="kpi-card"><span>ポイント評価額</span><strong id="totalPointValue">¥0</strong><small>円換算を入力した分のみ</small></article>
-      <article class="kpi-card accent"><span>ネット損益</span><strong id="netProfit">¥0</strong><small id="roiText">回収率 —</small></article>
+      <article class="kpi-card"><span>獲得ポイント</span><strong id="totalPointValue">0 pt</strong><small>参考ネットでは1pt=1円換算</small></article>
+      <article class="kpi-card accent"><span>参考ネット損益</span><strong id="netProfit">¥0</strong><small id="roiText">参考回収率 —</small></article>
     </section>
 
     <nav class="tabs" aria-label="キャンペーン切替">
@@ -61,6 +62,6 @@
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
+  <script src="app-v2.js?v=2"></script>
 </body>
 </html>
