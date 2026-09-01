@@ -1,0 +1,29 @@
+.cumulative-chart-panel { overflow: hidden; }
+.chart-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 18px 8px;
+}
+.chart-head h3 { margin: 0; font-size: 13px; }
+.chart-head p { margin: 4px 0 0; color: var(--muted-2); font-size: 10px; }
+.chart-stats { display: flex; gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
+.chart-stats div { min-width: 74px; text-align: right; }
+.chart-stats span { display: block; color: var(--muted-2); font-size: 9px; margin-bottom: 2px; }
+.chart-stats strong { font-size: 13px; }
+.chart-wrap { width: 100%; overflow-x: auto; padding: 0 8px 8px; }
+.cumulative-chart { width: 100%; min-width: 680px; height: 330px; display: block; }
+.chart-grid-line line { stroke: rgba(255,255,255,.06); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.chart-grid-line text, .chart-x-label { fill: var(--muted-2); font-size: 10px; font-family: inherit; }
+.chart-zero-line { stroke: rgba(255,255,255,.17); stroke-width: 1; stroke-dasharray: 5 5; vector-effect: non-scaling-stroke; }
+.chart-line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.chart-point { fill: var(--surface); stroke: var(--accent); stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.chart-point:hover { fill: var(--accent); }
+.chart-empty { padding: 44px 20px 48px; color: var(--muted-2); text-align: center; font-size: 11px; }
+@media (max-width: 700px) {
+  .chart-head { display: block; }
+  .chart-stats { justify-content: flex-start; margin-top: 12px; }
+  .chart-stats div { text-align: left; }
+  .cumulative-chart { min-width: 620px; height: 300px; }
+}
