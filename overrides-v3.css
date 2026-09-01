@@ -1,0 +1,43 @@
+/* v3: table header positioning + input ergonomics */
+input[type="number"], input[type="text"] {
+  text-align: left !important;
+  direction: ltr;
+  font-variant-numeric: normal;
+  caret-color: var(--accent);
+}
+input[type="number"] { appearance: auto; }
+.money-input, .qty-input { max-width: 132px; }
+.wide-number { max-width: 170px; }
+.check-cell { text-align: center; min-width: 72px; }
+.check-cell .mini-check { cursor: pointer; transform: scale(1.08); }
+.compact-table table { min-width: 760px; }
+.one-table table { min-width: 560px; }
+.gaika-table table { min-width: 720px; }
+.summary-three { grid-template-columns: repeat(3, 1fr); }
+.signed-number::placeholder { color: var(--muted-2); }
+
+/* The original sticky th used top:68px and visually slid over the first rows.
+   Keep campaign tables in normal document flow instead. */
+.table-wrap thead,
+.table-wrap tbody,
+.table-wrap tr { position: static; }
+.table-wrap th {
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  transform: none !important;
+  vertical-align: middle;
+  line-height: 1.25;
+}
+.table-wrap thead tr { height: auto; }
+.table-wrap tbody tr:first-child td { position: relative; }
+
+@media (max-width: 820px) {
+  .summary-three { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .summary-three { grid-template-columns: 1fr; }
+  .compact-table table { min-width: 720px; }
+  .one-table table { min-width: 520px; }
+  .gaika-table table { min-width: 680px; }
+}
